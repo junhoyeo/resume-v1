@@ -15,20 +15,23 @@ export default {
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap&subset=korean');
 
 html,
 body,
 #app {
   margin: 0;
-  height: 100%;
   width: 100%;
+}
+
+html {
+  // background: linear-gradient(#00AFFF, #0071D1);
+  // background-repeat: no-repeat;
 }
 
 #app {
   display: flex;
   justify-content: center;
-  background: linear-gradient(#00AFFF, #0071D1);
 }
 
 * {

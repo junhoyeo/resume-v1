@@ -2,7 +2,7 @@
   <div class="profile">
     <img
       class="profile__image"
-      :src="require('../assets/profile.png')"
+      :src="require('../assets/profile.jpeg')"
     />
     <div class="profile__info">
       <h1
@@ -24,11 +24,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 1.5rem;
   padding: 1.5rem 2rem;
 
   &__image {
     height: 9rem;
     width: 9rem;
+    border-radius: 50%;
     object-fit: cover;
   }
 
@@ -40,15 +42,14 @@
     margin: 0;
     margin-bottom: 0.5rem;
     font-size: 3rem;
-    font-family: 'Lobster', cursive;
-    color: #002780;
+    font-weight: 900;
+    letter-spacing: -1px;
   }
 
   &__summary {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    color: #002780;
   }
 }
 </style>

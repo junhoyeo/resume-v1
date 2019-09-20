@@ -1,0 +1,21 @@
+[
+  {
+    "name": "커넥션 공식 웹사이트",
+    "part": "Frontend",
+    "event": "Connection",
+    "date": "2019.08 ~ 2019.09",
+    "desc": "청소년 창업 및 활동 네트워크인 Connection의 웹사이트를 개발했습니다. 커넥션 소개, 신규 가입, 공지사항 및 뉴스 게시판 등의 메뉴가 있으며 Vue.js로 구현했습니다."
+  },
+  {
+    "name": "JUMP 장학샘 관리 인트라넷",
+    "part": "Backend API & Frontend",
+    "event": "사단법인 점프",
+    "date": "2018.09 ~ 2019.04"
+  },
+  {
+    "name": "나루도시락 거래처별 품목입출고내역 렌더러",
+    "part": "Backend",
+    "event": "나루도시락",
+    "date": "2018.08"
+  }
+]
