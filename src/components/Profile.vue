@@ -55,6 +55,11 @@ export default {
       height: 7rem;
       width: 7rem;
     }
+
+    @media (max-width: 350px) {
+      height: 5rem;
+      width: 5rem;
+    }
   }
 
   &__info {
@@ -71,12 +76,21 @@ export default {
     @media (max-width: 500px) {
       font-size: 2.2rem;
     }
+
+    @media (max-width: 330px) {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__summary {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 300;
+
+    @media (max-width: 330px) {
+      font-size: 1rem;
+    }
   }
 
   &__coffee {
