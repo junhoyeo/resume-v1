@@ -13,6 +13,15 @@ export default {
       outsourcing,
     };
   },
+  methods: {
+    imageStyle(exp) {
+      return {
+        // eslint-disable-next-line no-nested-ternary
+        width: (exp.full) ? '80%' : (exp.desktop) ? '48%' : '30%',
+        border: (exp.noBorder) ? '0' : '1px solid #eaecef',
+      };
+    },
+  },
 };
 </script>
 
@@ -31,6 +40,17 @@ export default {
             <h2>{{ exp.name }}</h2>
             <h3>{{ exp.part }} / {{ exp.event }} / {{ exp.date }}</h3>
             <p>{{ exp.desc }}</p>
+            <div
+              v-if="exp.images"
+              class="index__images"
+            >
+              <img
+                v-for="(img, key) in exp.images"
+                :key="key"
+                :style="imageStyle(exp)"
+                :src="require(`./assets/images/${img}`)"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +69,17 @@ export default {
               <span v-if="out.date">/ {{ out.date }}</span>
             </h3>
             <p>{{ out.desc }}</p>
+            <div
+              v-if="out.images"
+              class="index__images"
+            >
+              <img
+                v-for="(img, key) in out.images"
+                :key="key"
+                :style="imageStyle(out)"
+                :src="require(`./assets/images/${img}`)"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -77,6 +108,10 @@ export default {
         font-size: 1.2rem;
         font-weight: 500;
       }
+
+      @media (max-width: 500px) {
+        font-size: 2rem;
+      }
     }
 
     &:last-child {
@@ -103,6 +138,20 @@ export default {
     p {
       color: #383838;
       font-size: .9rem;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+
+    img {
+      border-radius: 3px;
+      user-select: none;
+      -webkit-user-drag: none;
     }
   }
 }

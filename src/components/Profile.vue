@@ -32,6 +32,11 @@
     width: 9rem;
     border-radius: 50%;
     object-fit: cover;
+
+    @media (max-width: 500px) {
+      height: 7rem;
+      width: 7rem;
+    }
   }
 
   &__info {
@@ -40,10 +45,14 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 0.5rem;
     font-size: 3rem;
     font-weight: 900;
+    line-height: 1;
     letter-spacing: -1px;
+
+    @media (max-width: 500px) {
+      font-size: 2.2rem;
+    }
   }
 
   &__summary {
