@@ -1,3 +1,14 @@
+<script>
+export default {
+  methods: {
+    onClickCoffee() {
+      const win = window.open('https://toss.im/_m/ZR7jhwxx');
+      win.focus();
+    },
+  },
+};
+</script>
+
 <template>
   <div class="profile">
     <img
@@ -13,6 +24,13 @@
       <p class="profile__summary">
         IT를 사용해서 세상에 기여하고자 하는 고등학생입니다.
       </p>
+      <div
+        class="profile__coffee"
+        @click="onClickCoffee"
+      >
+        <img :src="require('../assets/toss.webp')" />
+        <span>커피 사주기</span>
+      </div>
     </div>
   </div>
 </template>
@@ -59,6 +77,36 @@
     margin: 0;
     font-size: 1.2rem;
     font-weight: 300;
+  }
+
+  &__coffee {
+    cursor: pointer;
+    display: inline-flex;
+    border: 2px solid #2f5fd2;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #2f5fd2;
+    padding: 0.2rem 0;
+    padding-left: .3rem;
+    padding-right: .5rem;
+    margin-top: .5rem;
+    transition: all 2ms;
+    font-weight: 500;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      margin-bottom: 3px;
+    }
+
+    &:hover,
+    &:focus {
+      font-weight: 700;
+    }
   }
 }
 </style>
