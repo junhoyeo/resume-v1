@@ -149,6 +149,7 @@ export default {
     margin-bottom: 1.2rem;
 
     img {
+      height: 100%;
       border-radius: 3px;
       user-select: none;
       -webkit-user-drag: none;
