@@ -28,7 +28,7 @@ export default {
         class="profile__coffee"
         @click="onClickCoffee"
       >
-        <img :src="require('../assets/toss.webp')" />
+        <img :src="require('../assets/toss.png')" />
         <span>커피 사주기</span>
       </div>
     </div>
